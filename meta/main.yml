@@ -1,0 +1,23 @@
+galaxy_info:
+  author: w.luis.araujo
+  description: Install Jenkins
+  company: Personal
+  license: license (GPLv3)
+
+  min_ansible_version: 2
+
+  platforms:
+   - name: EL
+     versions:
+     - all
+    - name: Debian
+     versions:
+     - all  
+
+  galaxy_tags:
+     - Jenkins
+
+  dependencies: []
+
+  categories:
+     - Jenkins
