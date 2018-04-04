@@ -15,9 +15,9 @@ galaxy_info:
      - all  
 
   galaxy_tags:
-     - Jenkins
+     - jenkins
 
   dependencies: []
 
   categories:
-     - Jenkins
+     - jenkins
