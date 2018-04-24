@@ -2,11 +2,10 @@
 # tasks file for jenkins
 - name: Adicionando o repositorio do Jenkins
   get_url:
-    url: http://pkg.jenkins-ci.org/redhat/jenkins.repo
+    url: 'http://pkg.jenkins-ci.org/redhat/jenkins.repo'
     dest: /etc/yum.repos.d/jenkins.repo
 
-- name: importando chave gpg 
-  rpm_key: 
+- rpm_key: 
   state: present
   key: 'http://jenkins-ci.org/redhat/jenkins-ci.org.key'
   validate_certs: no
