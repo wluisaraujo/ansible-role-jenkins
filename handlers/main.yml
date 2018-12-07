@@ -1,7 +1,7 @@
 ---
 # handlers file for iac-ansible-jenkins
 - name: Start Jenkins
-- systemd:
+  systemd:
     state: started
     name: jenkins.service
     enabled: yes
