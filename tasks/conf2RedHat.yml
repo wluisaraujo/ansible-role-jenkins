@@ -8,9 +8,9 @@
   register: repo
   
 - rpm_key: 
-  state: present
-  key: 'http://jenkins-ci.org/redhat/jenkins-ci.org.key'
-  validate_certs: no
+    state: present
+    key: 'http://jenkins-ci.org/redhat/jenkins-ci.org.key'
+    validate_certs: no
   when:
     - ansible_os_family == "RedHat"
     - repo is success
