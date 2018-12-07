@@ -23,4 +23,7 @@
   when:
     - ansible_os_family == "RedHat"
     - rpmkey is success
+  register: PACKAGE
+  notify: 
+    - Start Jenkins
 ...
