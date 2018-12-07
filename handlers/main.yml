@@ -1,2 +1,11 @@
 ---
 # handlers file for iac-ansible-jenkins
+- name: Start Jenkins
+- systemd:
+    state: started
+    name: jenkins.service
+    enabled: yes
+    force: yes
+  ignore_errors: yes
+  when: 
+    - PACKAGE is success
