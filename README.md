@@ -28,8 +28,8 @@ Example Playbook
 ```yaml
 ---
 - hosts: localhost
-  vars:
-    - jenkins_hostname:: jenkins.example.com
+    vars_files:
+    - vars/main.yml
   roles:
     - iac-ansible-jenkins
 ...    
