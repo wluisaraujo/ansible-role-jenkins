@@ -18,14 +18,27 @@
     - aptkey is success
   register: aptrepo  
 
-#- name: Instalando Jenkins
-#  apt: 
-#    name: jenkins 
-#    state: latest
-#  when:
-#    - ansible_os_family == "Debian"
-#    - aptrepo is success
-#  register: PACKAGE
-#  notify: 
-#    - Start Jenkins
+- name: Instalando Dependencias
+  apt: 
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - curl
+    - apt-transport-https  
+  when:
+    - ansible_os_family == "Debian"
+    - aptrepo is success
+  register: DEPEND  
+
+- name: Instalando Jenkins
+  apt: 
+    name: jenkins 
+    state: latest
+  when:
+    - ansible_os_family == "Debian"
+    - DEPEND is success
+  register: PACKAGE
+  notify: 
+    - Start Jenkins
 ...

@@ -29,7 +29,7 @@ Example Playbook
 ---
 - hosts: localhost
   vars:
-    - name: value
+    - jenkins_hostname:: jenkins.example.com
   roles:
     - iac-ansible-jenkins
 ...    

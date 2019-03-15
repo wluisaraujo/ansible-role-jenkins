@@ -1,5 +1,7 @@
 ---
 # handlers file for iac-ansible-jenkins
+
+## Para SystemD
 - name: Start Jenkins
   systemd:
     state: started
@@ -8,4 +10,32 @@
     force: yes
   ignore_errors: yes
   when: 
-    - PACKAGE is success
+    - ansible_service_mgr == "systemd"
+
+- name: Restart Jenkins
+  systemd:
+    state: restarted
+    name: jenkins.service
+    force: yes
+  ignore_errors: yes
+  when: 
+    - ansible_service_mgr == "systemd"    
+
+## Para SystemV
+- name: Start Jenkins
+  service:
+    state: started
+    name: jenkins.service
+    enabled: yes
+  ignore_errors: yes
+  when: 
+    - ansible_service_mgr == "service"
+
+- name: Restart Jenkins
+  service:
+    state: restarted
+    name: jenkins.service
+  ignore_errors: yes
+  when: 
+    - ansible_service_mgr == "service"
+...

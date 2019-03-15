@@ -1,7 +1,7 @@
 galaxy_info:
   author: w.luis.araujo
   description: "Install Jenkins"
-  company: Personal
+  company: LUSAR
   license: "(GPLv3)"
   min_ansible_version: 1.5
   platforms:
@@ -11,5 +11,7 @@ galaxy_info:
   - name: Debian
     versions:
     - all
-  galaxy_tags: [jenkins]
+  galaxy_tags: 
+    - jenkins
+    - ci
 dependencies: []
