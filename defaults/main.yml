@@ -1,5 +1,7 @@
 ---
 # defaults file for iac-ansible-jenkins
+service_name: jenkins
+
 jenkins_package_state: present
 
 jenkins_connection_delay: 5
