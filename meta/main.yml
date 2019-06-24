@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: iac-ansible-jenkins
   author: w.luis.araujo
   description: "Install Jenkins"
   company: LUSAR | wluisaraujo.github.io
