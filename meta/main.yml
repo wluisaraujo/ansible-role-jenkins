@@ -1,10 +1,10 @@
 galaxy_info:
-  role_name: iac-ansible-jenkins
+  role_name: jenkins
   author: w.luis.araujo
-  description: "Install Jenkins"
+  description: "Infrastructure as Code (IaC) with Ansible role for Install Jenkins"
   company: LUSAR | wluisaraujo.github.io
-  license: "(GPLv3)"
-  min_ansible_version: 2.0
+  license: "license (GPLv3)"
+  min_ansible_version: 2.4
   platforms:
   - name: EL
     versions:
