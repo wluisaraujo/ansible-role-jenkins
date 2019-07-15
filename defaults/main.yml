@@ -1,5 +1,5 @@
 ---
-# defaults file for iac-ansible-jenkins
+# defaults file for jenkins
 service_name: jenkins
 
 jenkins_package_state: present

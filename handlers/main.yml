@@ -1,6 +1,5 @@
 ---
-# handlers file for iac-ansible-jenkins
-
+# handlers file for jenkins
 ## SystemD
 - name: Start {{ service_name }}
   systemd:
