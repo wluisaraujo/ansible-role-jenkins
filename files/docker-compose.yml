@@ -2,9 +2,9 @@
 version: '3.7'
 
 services:
-  jenkins2:
+  jenkins:
           image: jenkins/jenkins:lts
-          container_name: jenkins-teste
+          container_name: jenkins
           volumes:
             - /var/docker/jenkins/data:/var/jenkins_home
           restart: always
@@ -15,6 +15,7 @@ services:
   services:
     postgres: postgres
     image:
+    
   services:
     gogs:
     image: gogs
@@ -24,3 +25,6 @@ services:
 #dns_search:
 #  - dc1.example.com
 #  - dc2.example.com
+#extra_hosts:
+# - "somehost:162.242.195.82"
+# - "otherhost:50.31.209.229"
