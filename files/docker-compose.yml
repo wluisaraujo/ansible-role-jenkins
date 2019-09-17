@@ -12,3 +12,15 @@ services:
           ports:
             - "8085:8085"
             - "5001:5001"
+  services:
+    postgres: postgres
+    image:
+  services:
+    gogs:
+    image: gogs
+#dns:
+#  - 8.8.8.8
+#  - 9.9.9.9
+#dns_search:
+#  - dc1.example.com
+#  - dc2.example.com
