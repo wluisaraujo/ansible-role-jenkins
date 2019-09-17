@@ -1,0 +1,14 @@
+---
+version: '3.7'
+
+services:
+  jenkins2:
+          image: jenkins/jenkins:lts
+          container_name: jenkins-teste
+          volumes:
+            - /var/docker/jenkins/data:/var/jenkins_home
+          restart: always
+          network_mode: "host"
+          ports:
+            - "8085:8085"
+            - "5001:5001"
