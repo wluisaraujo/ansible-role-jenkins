@@ -16,8 +16,12 @@ Requirements
 Installation
 ------------
 
+Installation
+------------
+
 ```console
 vagrant@localhost:~$ ansible-galaxy install wluisaraujo.jenkins
+vagrant@localhost:~$ ansible-galaxy install -r wluisaraujo.jenkins/requirements.txt
 ```
 
 Role Variables
